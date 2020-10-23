@@ -8,7 +8,7 @@ class WppWidget {
     this.config = {
       ...args
     }
-    this.baseUrl = '//cdn.jsdelivr.net/gh/traction-app/whatsapp-widget/'
+    this.baseUrl = '//d2st9y38zyzf5b.cloudfront.net/'
     this.init()
   }
 
@@ -17,7 +17,7 @@ class WppWidget {
     const css = document.createElement('link')
     css.rel = "stylesheet"
     css.type = "text/css"
-    css.href = this.baseUrl + "dist/app.css"
+    css.href = this.baseUrl + "app.css"
     head.appendChild(css)
   }
 
