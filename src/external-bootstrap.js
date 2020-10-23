@@ -16,7 +16,7 @@ class WppWidget {
     const css = document.createElement('link')
     css.rel = "stylesheet"
     css.type = "text/css"
-    css.href = this.config.cdnPath + "app.css"
+    css.href = this.config.cdnPath + "/app.css"
     head.appendChild(css)
   }
 

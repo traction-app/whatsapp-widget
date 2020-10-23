@@ -13,11 +13,3 @@ if(process.env.NODE_ENV == 'dev') {
 } else {
   require('./external-bootstrap.js')
 }
-
-
-
-const eventAwesome = new CustomEvent('awesome', {
-  bubbles: true
-});
-
-console.log(eventAwesome)
