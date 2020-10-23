@@ -8,7 +8,6 @@ class WppWidget {
     this.config = {
       ...args
     }
-    this.baseUrl = '//d2st9y38zyzf5b.cloudfront.net/'
     this.init()
   }
 
@@ -17,7 +16,7 @@ class WppWidget {
     const css = document.createElement('link')
     css.rel = "stylesheet"
     css.type = "text/css"
-    css.href = this.baseUrl + "app.css"
+    css.href = this.config.cdnPath + "app.css"
     head.appendChild(css)
   }
 

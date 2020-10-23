@@ -7,13 +7,15 @@
 </head>
 <body>
   <h1>This is an example page</h1>
-  <script src="https://d2st9y38zyzf5b.cloudfront.net/app.js" type="text/javascript"></script>
+  <script src="//d2st9y38zyzf5b.cloudfront.net/app.js" type="text/javascript"></script>
   <script>
     new WppWidget({
       'title': 'Envie-nos uma mensagem!',
       'message': 'lorem ipsum dolor sit amet',
-      'endpoint': 'Test'
+      'endpoint': 'Test',
+      'cdnPath': '//d2st9y38zyzf5b.cloudfront.net'
     })
+    this.baseUrl = 'https://d2st9y38zyzf5b.cloudfront.net/'
   </script>
 </body>
 </html>
