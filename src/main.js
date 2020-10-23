@@ -16,5 +16,8 @@ if(process.env.NODE_ENV == 'dev') {
 
 
 
+const eventAwesome = new CustomEvent('awesome', {
+  bubbles: true
+});
 
-
+console.log(eventAwesome)
