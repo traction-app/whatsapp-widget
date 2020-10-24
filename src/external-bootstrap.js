@@ -4,10 +4,11 @@ import '@/assets/main.css'
 
 class WppWidget {
 
-  constructor(args) {
+  constructor(args, node) {
     this.config = {
       ...args
     }
+    this.path = node.src
     this.init()
   }
 
@@ -16,7 +17,7 @@ class WppWidget {
     const css = document.createElement('link')
     css.rel = "stylesheet"
     css.type = "text/css"
-    css.href = this.config.cdnPath + "/app.css"
+    css.href = this.path + "/app.css"
     head.appendChild(css)
   }
 
