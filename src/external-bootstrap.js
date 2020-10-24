@@ -4,12 +4,17 @@ import '@/assets/main.css'
 
 class WppWidget {
 
-  constructor(args, node) {
+  constructor(args, context) {
     this.config = {
       ...args
     }
-    this.path = node.src
+    this.context = context
     this.init()
+  }
+
+  setCurrentPath () {
+    const url = new URL(this.context)
+    this.path = url.origin
   }
 
   bootCss() {
@@ -37,8 +42,9 @@ class WppWidget {
   }
 
   init() {
+    this.setCurrentPath()
     this.bootDOM()
-    this.bootCss()
+    this.bootCss()    
     this.bootVue(this.config)
   }
 }
