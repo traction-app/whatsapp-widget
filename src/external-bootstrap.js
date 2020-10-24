@@ -13,7 +13,7 @@ class WppWidget {
   }
 
   setCurrentPath () {
-    const url = new URL(this.context)
+    const url = new URL(this.context.src)
     this.path = url.origin
   }
 
