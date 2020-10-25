@@ -41,7 +41,8 @@ Exemplo de código com campos opcionais
   document.body.appendChild( s );
 })('https://d2st9y38zyzf5b.cloudfront.net/app.js', {
   'phone': '+55111111111',
-  'endpoint': 'https://meucrm.com/leads'
+  'endpoint': 'https://meucrm.com/leads',
+  'message': 'Olá, preciso de ajuda!',
   'cta': 'Me chame no WhatsApp!'
 });
 </script>
