@@ -49,14 +49,6 @@ export default {
     return {
       isOpen: false
     }
-  },
-  methods: {
-    submit () {
-      //console.log('Teste')
-    }
-  },
-  created () {
-    
   }
 }
 </script>

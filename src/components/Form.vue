@@ -24,10 +24,10 @@
       required
     />
     <button
-      @click="submit"
+      type="submit"
       class="bg-green-500 text-white block w-full p-2 rounded-md"
     >
-      Enviar mensagem
+      {{ $wppConfig.cta || 'Enviar mensagem' }}
     </button>
   </form>
 </template>
@@ -35,41 +35,45 @@
 <script>
 import axios from 'axios'
 export default {
-  data () {
+  data() {
     return {
       form: {
         name: '',
         email: '',
-        phone: ''
-      }
+        phone: '',
+      },
     }
   },
   watch: {
-    'form.phone' () {
+    'form.phone'() {
       let a = this.form.phone
-      a = a.replace(/\D/g, "")
-      a = a.replace(/^(\d{2})(\d)/g, "($1) $2")
-      if (a.length > 12) a = a.replace(/(\d)(\d{4})$/, "$1-$2")
+      a = a.replace(/\D/g, '')
+      a = a.replace(/^(\d{2})(\d)/g, '($1) $2')
+      if (a.length > 12) a = a.replace(/(\d)(\d{4})$/, '$1-$2')
       this.form.phone = a
-    }
+    },
   },
   methods: {
-    submit () {
-      const { phone, endpoint } = this.$wppConfig      
-      if(endpoint) {
+    submit() {
+      const { phone, endpoint } = this.$wppConfig
+      if (endpoint) {
         this.sendRequest(endpoint)
       }
       this.openWhatsapp(phone)
+      this.destroyForm()
     },
-    openWhatsapp (phone) {
-      window.open(
-        `https://wa.me/${phone}`,
-        '_blank'
-      )
+    openWhatsapp(phone) {
+      window.open(`https://wa.me/${phone}`, '_blank')
     },
-    sendRequest (endpoint) {
-      axios.post(`${endpoint}`, this.form)
-    }  
-  }
+    sendRequest(endpoint) {
+      axios.post(`${endpoint}`, {
+        ...this.form,
+        utm_source: 'whatsapp',
+      })
+    },
+    destroyForm() {
+      this.$parent.isOpen = false
+    },
+  },
 }
 </script>
