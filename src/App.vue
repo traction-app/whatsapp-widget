@@ -10,7 +10,7 @@
     >
       <div
         v-if="isOpen"
-        class="shadow fixed bottom-0 right-0 mb-32 mr-10 bg-gray-200 rounded-xl transform w-1/6"
+        class="shadow fixed bottom-0 border right-0 mb-32 mr-10 bg-gray-200 rounded-xl transform w-84"
       >
         <div class="bg-green-500 p-6 rounded-t-xl text-white">
           <h2 class="text-lg font-bold mb-4">{{ $wppConfig.title || 'Envie sua mensagem! 👋' }} </h2>
@@ -18,39 +18,13 @@
             {{ $wppConfig.description || 'Preencha os dados para abrir a janela do WhatsApp' }}
           </p>
         </div>
-        <form class="p-6" @submit.prevent="submit">
-        <input
-          class="block w-full py-2 px-3 border rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
-          v-model="form.name"
-          placeholder="Seu nome"
-          type="text"
-          autofocus
-          required
-        />
-        <input
-          class="block w-full py-2 px-3 border rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
-          v-model="form.email"
-          placeholder="Seu e-mail"
-          type="text"
-          required
-        />
-        <input
-          class="block w-full py-2 px-3 border rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
-          v-model="form.phone"
-          placeholder="Seu telefone"
-          type="text"
-          required
-        />
-        <button @click="submit" class="bg-green-500 text-white block w-full p-2 rounded-md">
-          Enviar mensagem
-        </button>
-        </form>
+        <Form />
         <p class="-mt-4 pb-2 text-center text-gray-500 text-sm text-xs">
           <small>Powered by Traction</small>
         </p>
       </div>
     </transition>
-    <a @click="isOpen = !isOpen" class="block text-green-500 mr-10 mb-10">
+    <a @click="isOpen = !isOpen" class="block text-green-500 mr-10 mb-10 cursor-pointer">
       <svg
         class="fill-current h-16 w-16"
         xmlns="http://www.w3.org/2000/svg"
@@ -66,15 +40,14 @@
 </template>
 
 <script>
+import Form from '@/components/Form.vue'
 export default {
+  components: {
+    Form
+  },
   data() {
     return {
-      isOpen: false,
-      form: {
-        name: '',
-        email: '',
-        phone: '',
-      },
+      isOpen: false
     }
   },
   methods: {
@@ -83,7 +56,7 @@ export default {
     }
   },
   created () {
-    //console.log(this.$wppConfig)
+    
   }
 }
 </script>
