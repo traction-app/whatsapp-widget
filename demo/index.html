@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This is an example page</title>
+  <link rel="stylesheet" href="https://www.wsiconsultores.com.br/wp-content/themes/wsi/dist/styles/main.css">
 </head>
 <body>
   <h1>This is an example page</h1>
   <script>
     ;(function(src, config) {
-      var s = document.createElement( 'script' );s.setAttribute( 'src', src );
+      var s = document.createElement( 'script' );
+      s.src=('https:' == document.location.protocol ? 'https://' : 'http://') + src
       s.onload = function () { new WppWidget(config, this) }
       document.body.appendChild( s );
-    })('https://d2st9y38zyzf5b.cloudfront.net/app.js', {
-      'endpoint': 'Test',
+    })('d2st9y38zyzf5b.cloudfront.net/app.js', {
       'phone': '55169823945'       
     });
   </script>

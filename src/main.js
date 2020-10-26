@@ -7,7 +7,7 @@ if(process.env.NODE_ENV === 'development') {
   Vue.prototype.$wppConfig = {
     phone: '5516982394540',
     endpoint: 'https://webhook.site/2174205b-64fa-4c90-978d-8ec7918ae861',
-    message: 'Olá, gostaria de saber mais informações! Você pode me ajudar, por favor?'
+    message: 'Olá, gostaria de saber mais informações!'
   }  
   new Vue({
     render: h => h(App),

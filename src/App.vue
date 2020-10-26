@@ -1,5 +1,6 @@
 <template>
-  <section class="fixed bottom-0 right-0">
+<div class="wpp-app">
+  <section class="fixed bottom-0 right-0" style="z-index:999999">
     <transition
       enter-active-class="transition ease-out duration-200"
       leave-active-class="transition ease-in duration-150"
@@ -13,7 +14,7 @@
         class="shadow fixed bottom-0 border right-0 mb-32 mr-10 bg-gray-200 rounded-xl transform w-84"
       >
         <div class="bg-green-500 p-6 rounded-t-xl text-white">
-          <h2 class="text-lg font-bold mb-4">{{ $wppConfig.title || 'Envie sua mensagem! 👋' }} </h2>
+          <h2 class="text-lg text-white font-bold mb-4">{{ $wppConfig.title || 'Envie sua mensagem! 👋' }} </h2>
           <p>
             {{ $wppConfig.description || 'Preencha os dados para abrir a janela do WhatsApp' }}
           </p>
@@ -37,6 +38,7 @@
       </svg>
     </a>
   </section>
+  </div>
 </template>
 
 <script>
@@ -52,3 +54,8 @@ export default {
   }
 }
 </script>
+<style>
+html {
+  font-size: 16px;
+}
+</style>
