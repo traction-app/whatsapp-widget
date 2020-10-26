@@ -55,15 +55,16 @@ export default {
   },
   methods: {
     submit() {
-      const { phone, endpoint } = this.$wppConfig
+      const { phone, endpoint, message } = this.$wppConfig
       if (endpoint) {
         this.sendRequest(endpoint)
       }
-      this.openWhatsapp(phone)
+      this.openWhatsapp(phone, message)
       this.destroyForm()
     },
-    openWhatsapp(phone) {
-      window.open(`https://wa.me/${phone}`, '_blank')
+    openWhatsapp(phone, message = null) {
+      const append = (message) ? `?text=${encodeURIComponent(message)}` : '';
+      window.open(`https://wa.me/${phone}${append}`, '_blank')
     },
     sendRequest(endpoint) {
       axios.post(`${endpoint}`, {

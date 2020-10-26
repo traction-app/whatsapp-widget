@@ -5,8 +5,9 @@ import '@/assets/main.css'
 if(process.env.NODE_ENV === 'development') {  
   Vue.config.productionTip = false  
   Vue.prototype.$wppConfig = {
-    phone: '+551111111111',
-    endpoint: '#'
+    phone: '5516982394540',
+    endpoint: 'https://webhook.site/2174205b-64fa-4c90-978d-8ec7918ae861',
+    message: 'Olá, gostaria de saber mais informações! Você pode me ajudar, por favor?'
   }  
   new Vue({
     render: h => h(App),
