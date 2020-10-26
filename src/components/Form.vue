@@ -1,7 +1,7 @@
 <template>
   <form class="p-6" @submit.prevent="submit">
     <input
-      class="block w-full py-2 px-3 border-none rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
+      class="block w-full py-2 px-3 border-none rounded-md mb-4 focus:border-2 focus:outline-none focus:shadow"
       v-model="form.name"
       placeholder="Seu nome"
       type="text"
@@ -9,14 +9,14 @@
       required
     />
     <input
-      class="block w-full py-2 px-3 border-none rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
+      class="block w-full py-2 px-3 border-none rounded-md mb-4 focus:border-2 focus:outline-none focus:shadow"
       v-model="form.email"
       placeholder="Seu e-mail"
       type="email"
       required
     />
     <input
-      class="block w-full py-2 px-3 border-none rounded-md mb-2 focus:border-2 focus:outline-none focus:shadow"
+      class="block w-full py-2 px-3 border-none rounded-md mb-4 focus:border-2 focus:outline-none focus:shadow"
       v-model="form.phone"
       placeholder="Seu telefone"
       type="text"
