@@ -58,8 +58,9 @@ export default {
   computed: {
     sectionStyle () {
       return {
-        marginRight: (this.$wppConfig.top || 30 ) + 'px',
-        marginBottom: (this.$wppConfig.bottom || 30 ) + 'px'
+        marginRight: (this.$wppConfig.right || 30 ) + 'px',
+        marginBottom: (this.$wppConfig.bottom || 30 ) + 'px',
+        zIndex: 99999
       }
     }
   }
