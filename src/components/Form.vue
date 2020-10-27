@@ -80,9 +80,10 @@ form {
   padding: 25px 15px 0;
 }
 input {
-  @apply block w-full py-2 px-3 border-none rounded-md;
-  padding: 8px 12px;
+  @apply block w-full border-none rounded-md;
+  padding: 12px 12px;
   margin-bottom: 15px;
+  font-size: 14px;
 }
 input:focus {
   @apply border-2 outline-none shadow;

@@ -1,6 +1,6 @@
 <template>
   <div class="wpp-app">
-    <section class="wpp-app-wrapper" :style="sectionStyle">
+    <section :style="sectionStyle">
       <transition
         enter-active-class="transition ease-out duration-200"
         leave-active-class="transition ease-in duration-150"
