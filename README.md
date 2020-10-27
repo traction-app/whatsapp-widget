@@ -5,14 +5,15 @@
 Para utilizá-lo, copie o código abaixo e cole-o no antes do `</body>` de sua página! 
 
 ```html
-<script type="text/javascript">
-;(function(src, config) {
-  var s = document.createElement( 'script' );s.setAttribute( 'src', src );
-  s.onload = function () { new WppWidget(config, this) }
-  document.body.appendChild( s );
-})('https://d2st9y38zyzf5b.cloudfront.net/app.js', {
-  'phone': '+55111111111'
-});
+<script>
+  ;(function(src, config) {
+    var s = document.createElement( 'script' );
+    s.src=('https:' == document.location.protocol ? 'https://' : 'http://') + src
+    s.onload = function () { new WppWidget(config, this) }
+    document.body.appendChild( s );
+  })('d2st9y38zyzf5b.cloudfront.net/app.js', {
+    'phone': '+55111111111'       
+  });
 </script>
 ```
 
@@ -27,6 +28,8 @@ Altere no trecho do código o telefone *+55111111111* para o telefone final que 
 | title         | Título padrão do formulário exibido  | Envie sua mensagem! 👋' | 
 | description   | Descrição padrão do formulário | Preencha os dados para abrir a janela do WhatsApp |
 | cta           | Label do botão de envio do formulário | Enviar mensagem |
+| bottom        | Distância em pixel à partir do lado de baixo da tela | 20 |
+| right         | Distância em pixel à partir do lado direito da tela | 30 |
 
 
 ## Exemplo
@@ -36,9 +39,10 @@ Exemplo de código com campos opcionais
 ```html
 <script type="text/javascript">
 ;(function(src, config) {
-  var s = document.createElement( 'script' );s.setAttribute( 'src', src );
-  s.onload = function () { new WppWidget(config, this) }
-  document.body.appendChild( s );
+    var s = document.createElement( 'script' );
+    s.src=('https:' == document.location.protocol ? 'https://' : 'http://') + src
+    s.onload = function () { new WppWidget(config, this) }
+    document.body.appendChild( s );
 })('https://d2st9y38zyzf5b.cloudfront.net/app.js', {
   'phone': '+55111111111',
   'endpoint': 'https://meucrm.com/leads',
