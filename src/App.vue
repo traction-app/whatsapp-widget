@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 section {
-  @apply fixed bottom-0 right-0;
+  @apply font-sans fixed bottom-0 right-0;
 }
 .wpp-app-box {
   @apply shadow absolute bottom-0 border right-0 bg-gray-200 rounded-xl transform;
