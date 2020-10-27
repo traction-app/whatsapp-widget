@@ -1,7 +1,6 @@
 <template>
-  <form class="form" @submit.prevent="submit">
+  <form @submit.prevent="submit">
     <input
-      class="input"
       v-model="form.name"
       placeholder="Seu nome"
       type="text"
@@ -9,14 +8,12 @@
       required
     />
     <input
-      class="input"
       v-model="form.email"
       placeholder="Seu e-mail"
       type="email"
       required
     />
     <input
-      class="input"
       v-model="form.phone"
       placeholder="Seu telefone"
       type="text"
@@ -25,7 +22,6 @@
     />
     <button
       type="submit"
-      class="cta"
     >
       {{ $wppConfig.cta || 'Enviar mensagem' }}
     </button>
@@ -80,18 +76,18 @@ export default {
 </script>
 
 <style scoped>
-.form {
+form {
   padding: 25px 15px 0;
 }
-.input {
+input {
   @apply block w-full py-2 px-3 border-none rounded-md;
   padding: 8px 12px;
   margin-bottom: 15px;
 }
-.input:focus {
+input:focus {
   @apply border-2 outline-none shadow;
 }
-.cta {
+button {
   @apply border-0 bg-green-500 text-white block w-full rounded-md;
   padding: 8px;
 }
