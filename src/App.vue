@@ -94,6 +94,7 @@ h3 {
 .wpp-app-copyright {
   @apply text-center text-gray-500;
   margin: 15px 0 20px;
+  font-size: 12px;
 }
 .translate-y-20 {
   --transform-translate-y: 80px;

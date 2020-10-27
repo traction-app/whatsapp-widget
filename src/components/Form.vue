@@ -91,5 +91,7 @@ input:focus {
 button {
   @apply border-0 bg-green-500 text-white block w-full rounded-md;
   padding: 8px;
+  padding: 11px;
+  font-size: 16px;
 }
 </style>
