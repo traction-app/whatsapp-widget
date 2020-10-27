@@ -81,7 +81,8 @@ h2 {
 h3 {
   color: #fff;
   font-size: 16px;
-  font-weight: bold;
+  line-height: 130%;
+  font-weight: normal;
   margin: 0;
 }
 .cta {
