@@ -22,6 +22,7 @@
     />
     <button
       type="submit"
+      id="wpp-cta"
     >
       {{ $wppConfig.cta || 'Enviar mensagem' }}
     </button>
