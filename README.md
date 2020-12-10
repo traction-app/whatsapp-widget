@@ -43,7 +43,7 @@ Exemplo de código com campos opcionais
     s.src=('https:' == document.location.protocol ? 'https://' : 'http://') + src
     s.onload = function () { new WppWidget(config, this) }
     document.body.appendChild( s );
-})('https://d2st9y38zyzf5b.cloudfront.net/app.js', {
+})('d2st9y38zyzf5b.cloudfront.net/app.js', {
   'phone': '+55111111111',
   'endpoint': 'https://meucrm.com/leads',
   'message': 'Olá, preciso de ajuda!',
